@@ -23,5 +23,22 @@
 </script>
 
 <style lang="scss" scoped>
-    
+    nav{
+        @apply shadow;
+        .nav-bar{
+            @apply flex container mx-auto py-2;
+            .brand{
+                @apply flex flex-col;
+            }
+            .nav-items{
+                @apply flex ms-auto;
+                .nav-item{
+                    @apply p-3;
+                }
+                .nav-item.active{
+                    @apply underline underline-offset-8;
+                }
+            }
+        }
+    }
 </style>
