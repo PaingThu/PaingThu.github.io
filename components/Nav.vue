@@ -1,6 +1,6 @@
 <template>
-    <nav>
-        <div class="nav-bar">
+    <nav class="shadow">
+        <div class="nav-bar flex container mx-auto py-2" >
             <div class="brand">
                 <span>MAW PAING THU</span>
                 <span>モーパイントゥー</span>
@@ -24,9 +24,7 @@
 
 <style lang="scss" scoped>
     nav{
-        @apply bg-orange-300 shadow;
         .nav-bar{
-            @apply flex container mx-auto py-2;
             .brand{
                 @apply flex flex-col;
             }
