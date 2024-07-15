@@ -6,20 +6,20 @@
                 <span>モーパイントゥー</span>
             </div>
             <div class="nav-items">
-                <NuxtLink class="nav-item" to="/">Home</NuxtLink>
-                <NuxtLink class="nav-item" to="/about">About</NuxtLink>
-                <NuxtLink class="nav-item" to="/skills">Skills</NuxtLink>
-                <NuxtLink class="nav-item" to="/education">Education</NuxtLink>
-                <NuxtLink class="nav-item" to="/work">Work</NuxtLink>
-                <NuxtLink class="nav-item" to="/experience">Experience</NuxtLink>
-                <NuxtLink class="nav-item" to="/contact">Contact</NuxtLink>
+                <NuxtLink :class="['nav-item', route.name == 'index' ? 'active' : '']" to="/">Home</NuxtLink>
+                <NuxtLink :class="['nav-item', route.name == 'about' ? 'active' : '']" to="/about">About</NuxtLink>
+                <NuxtLink :class="['nav-item', route.name == 'skills' ? 'active' : '']" to="/skills">Skills</NuxtLink>
+                <NuxtLink :class="['nav-item', route.name == 'education' ? 'active' : '']" to="/education">Education</NuxtLink>
+                <NuxtLink :class="['nav-item', route.name == 'work' ? 'active' : '']" to="/work">Work</NuxtLink>
+                <NuxtLink :class="['nav-item', route.name == 'experience' ? 'active' : '']" to="/experience">Experience</NuxtLink>
+                <NuxtLink :class="['nav-item', route.name == 'contact' ? 'active' : '']" to="/contact">Contact</NuxtLink>
             </div>
         </div>
     </nav>
 </template>
 
 <script setup>
-
+    const route = useRoute()
 </script>
 
 <style lang="scss" scoped>
@@ -33,9 +33,11 @@
             .nav-items{
                 @apply flex ms-auto;
                 .nav-item{
-                    @apply p-3 underline-offset-8;
+                    @apply p-3;
                 }
-    
+                .nav-item.active{
+                    @apply underline underline-offset-8;
+                }
             }
         }
     }
