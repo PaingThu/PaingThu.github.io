@@ -24,7 +24,7 @@
 
 <style lang="scss" scoped>
     nav{
-        @apply shadow;
+        @apply bg-orange-300 shadow;
         .nav-bar{
             @apply flex container mx-auto py-2;
             .brand{
