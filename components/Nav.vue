@@ -33,7 +33,7 @@
             .nav-items{
                 @apply flex ms-auto;
                 .nav-item{
-                    @apply p-3 underline-offset-8
+                    @apply p-3 underline-offset-8;
                 }
     
             }
