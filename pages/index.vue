@@ -1,6 +1,6 @@
 <template>
     <div>
-        Maw Paing Thu
+        Home
     </div>
 </template>
 
