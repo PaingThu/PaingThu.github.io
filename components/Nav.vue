@@ -24,7 +24,7 @@
 
 <style lang="scss" scoped>
     nav{
-        @apply shadow;
+        @apply shadow bg-slate-300;
         .nav-bar{
             @apply flex container mx-auto py-2;
             .brand{
@@ -33,7 +33,7 @@
             .nav-items{
                 @apply flex ms-auto;
                 .nav-item{
-                    @apply p-3;
+                    @apply p-3 transition delay-150 duration-300 hover:underline hover:underline-offset-8;
                 }
                 .nav-item.active{
                     @apply underline underline-offset-8;
