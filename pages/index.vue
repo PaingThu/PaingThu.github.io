@@ -36,11 +36,11 @@
 
 <style lang="scss" scoped>
     .home-page{
-        @apply container mx-auto;
         .banner{
-            @apply flex flex-col items-center;
+            @apply flex flex-col items-center px-4;
             .banner-info{
-                @apply py-12 flex gap-4 items-center;
+                @apply py-8 flex flex-col-reverse gap-4 items-center;
+                @apply md:py-12 md:flex-row gap-4;
                 .pp{
                     @apply bg-slate-300 rounded-full p-3 shadow-lg;
                     img{
@@ -61,7 +61,8 @@
                     .sns{
                         @apply inline-flex items-center gap-3 ms-auto;
                         .sns-icon{
-                            @apply shadow p-1 rounded-full border hover:border-slate-300 hover:shadow-none border-white hover:bg-slate-100 ;
+                            @apply shadow p-1 rounded-full border border-white;
+                            @apply hover:border-slate-300 hover:shadow-none hover:bg-slate-100 ;
                         }
                     }
                 }
