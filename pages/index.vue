@@ -48,7 +48,8 @@
                     }
                 }
                 .me{
-                    @apply text-right;
+                    @apply text-center;
+                    @apply md:text-right;
                     h3{
                         @apply text-slate-300;
                         .mpt{
