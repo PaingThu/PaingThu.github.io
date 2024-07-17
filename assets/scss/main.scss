@@ -10,6 +10,12 @@ body{
     h4{
         @apply font-bold text-xl;
     }
+    .svg-icon{
+        @apply flex;
+        svg{
+            @apply w-[24px] h-[24px];
+        }
+    }
     .nuxt-color{
         @apply text-[#00c16a];
     }
