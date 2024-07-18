@@ -8,6 +8,9 @@
                     <h4>Full-Stack Developer</h4>
                     <h3><span class="nuxt-color">Vue.js <small>&</small> Nuxt.js </span><small>&</small> <span class="php-color">PHP</span></h3>
                     <div class="sns">
+                        <NuxtLink class="sns-icon" :to="SNS.linkedin" title="Welcome to my LinkedIn!" target="_blank">
+                            <span class="svg-icon" v-html="ICONS.linkedin"></span>
+                        </NuxtLink>
                         <NuxtLink class="sns-icon" :to="SNS.github" title="Welcome to my Github!" target="_blank">
                             <span class="svg-icon" v-html="ICONS.github"></span>
                         </NuxtLink>
