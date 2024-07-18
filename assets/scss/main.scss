@@ -22,4 +22,14 @@ body{
     .php-color{
         @apply text-[#4f5b93];
     }
+    .page-content{
+        @apply min-h-[calc(100vh-120px)];
+    }
+    .floating-logo{
+        svg{
+            @apply w-[35px] h-[35px];
+            @apply md:w-[75px] md:h-[75px];
+        }
+    }
+    
 }

@@ -42,7 +42,7 @@
 <style lang="scss" scoped>
     //md: means from ≥768px
     nav{
-        @apply sticky top-0 shadow bg-slate-300 px-4 z-50;
+        @apply sticky top-0 shadow px-4 z-50;
         .cover{
             @apply absolute top-0 left-0 w-full h-screen bg-slate-700/50 z-10;
             @apply md:hidden;
@@ -60,7 +60,7 @@
                 @apply ms-auto;
                 .nav-items{
                     @apply absolute top-0 right-0 flex flex-col bg-white w-3/4 h-screen shadow z-20; 
-                    @apply md:flex-row md:static md:shadow-none md:w-auto md:h-auto md:bg-slate-300;
+                    @apply md:flex-row md:static md:shadow-none md:w-auto md:h-auto;
                     .nav-item{
                         @apply p-3 transition delay-150 duration-300 border-b-[0.5px]; 
                         @apply active:bg-slate-300;

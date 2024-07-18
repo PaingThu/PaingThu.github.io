@@ -8,8 +8,14 @@ export default defineNuxtConfig({
         head:{
             title: "MAW PAING THU",
             meta:[
-                { name: "description", content: "Full-Stack Developer Vue.js & Nuxt.js & Tailwind & SASS/SCSS & PHP" },
-                { name: "keywords", content: "MAW PAING THU, Frontend Developer, Full-Stack Developer, PHP API Developer, Vue Developer, Nuxt Developer"  }
+                { 
+                    name: "description", 
+                    content: "I’m a passionate Full Stack developer with expertise in Vue.js, Nuxt.js, and PHP API development. Let’s connect and create something remarkable together! Feel free to reach out—I’m always up for a coding adventure." 
+                },
+                { 
+                    name: "keywords", 
+                    content: "MAW PAING THU, Frontend Developer, Full-Stack Developer, PHP API Developer, Vue Developer, Nuxt Developer"  
+                }
             ]
         }
     },
