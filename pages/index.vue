@@ -3,22 +3,22 @@
         <div class="banner">
             <div class="skills">
                 <div class="frontend">
-                    <span :class="['floating-logo', 'nuxt-js', hoverEffect]" v-html="ICONS.nuxt" title="Nuxt.js - 1 year of experience"></span>
-                    <span :class="['floating-logo', 'vue-js', hoverEffect]" v-html="ICONS.vue" title="Vue.js - 3 years of experience"></span>
-                    <span :class="['floating-logo', 'sass', hoverEffect]" v-html="ICONS.sass" title="SASS - 3 years of experience"></span>
-                    <span :class="['floating-logo', 'tailwind', hoverEffect]" v-html="ICONS.tailwind" title="Tailwind - 1 year of experience"></span>
-                    <span :class="['floating-logo', 'ts', hoverEffect]" v-html="ICONS.ts" title="Typescript - 1.5 years of experience"></span>
-                    <span :class="['floating-logo', 'js', hoverEffect]" v-html="ICONS.js" title="JavaScript - 6 years of experience"></span>
-                    <span :class="['floating-logo', 'bootstrap', hoverEffect]" v-html="ICONS.bootstrap" title="Bootstrap - 4 years of experience"></span>
+                    <span :class="['floating-logo', 'nuxt-js', hoverEffect]" v-html="ICONS.nuxt" :title="`Nuxt.js - ${getExperienceInfo('nuxt')}`"></span>
+                    <span :class="['floating-logo', 'vue-js', hoverEffect]" v-html="ICONS.vue" :title="`Vue.js - ${getExperienceInfo('vue')}`"></span>
+                    <span :class="['floating-logo', 'sass', hoverEffect]" v-html="ICONS.sass" :title="`SASS - ${getExperienceInfo('sass')}`"></span>
+                    <span :class="['floating-logo', 'tailwind', hoverEffect]" v-html="ICONS.tailwind" :title="`Tailwind - ${getExperienceInfo('tailwind')}`"></span>
+                    <span :class="['floating-logo', 'ts', hoverEffect]" v-html="ICONS.ts" :title="`Typescript - ${getExperienceInfo('typescript')}`"></span>
+                    <span :class="['floating-logo', 'js', hoverEffect]" v-html="ICONS.js" :title="`JavaScript - ${getExperienceInfo('javascript')}`"></span>
+                    <span :class="['floating-logo', 'bootstrap', hoverEffect]" v-html="ICONS.bootstrap" :title="`Bootstrap - ${getExperienceInfo('bootstrap')}`"></span>
                 </div>
                 <div class="backend">
-                    <span :class="['floating-logo', 'laravel', hoverEffect]" v-html="ICONS.laravel" title="Laravel - 1 year of experience"></span>
-                    <span :class="['floating-logo', 'php', hoverEffect]" v-html="ICONS.php" title="PHP - 3 years of experience"></span>
-                    <img src="/assets/images/slim.png" :class="['floating-logo', 'slim', hoverEffect]" title="SLIM - 2 years of experience" />
-                    <span :class="['floating-logo', 'mysql', hoverEffect]" v-html="ICONS.mysql" title="MySQL - 5 years of experience"></span>
-                    <img src="/assets/images/composer.svg" :class="['floating-logo', 'composer', hoverEffect]" title="Composer - 3 years of experience" />
-                    <img src="/assets/images/aws-2.svg" :class="['floating-logo', 'aws', hoverEffect]" title="AWS - 2 years of experience" />
-                    <img src="/assets/images/postgresql.svg" :class="['floating-logo', 'postgresql', hoverEffect]" title="PostgreSQL - 1 year of experience" />
+                    <span :class="['floating-logo', 'laravel', hoverEffect]" v-html="ICONS.laravel" :title="`Laravel - ${getExperienceInfo('laravel')}`"></span>
+                    <span :class="['floating-logo', 'php', hoverEffect]" v-html="ICONS.php" :title="`PHP - ${getExperienceInfo('php')}`"></span>
+                    <img src="/assets/images/slim.png" :class="['floating-logo', 'slim', hoverEffect]" :title="`SLIM - ${getExperienceInfo('slim')}`" />
+                    <span :class="['floating-logo', 'mysql', hoverEffect]" v-html="ICONS.mysql" :title="`MySQL - ${getExperienceInfo('mysql')}`"></span>
+                    <img src="/assets/images/composer.svg" :class="['floating-logo', 'composer', hoverEffect]" :title="`Composer - ${getExperienceInfo('composer')}`" />
+                    <img src="/assets/images/aws-2.svg" :class="['floating-logo', 'aws', hoverEffect]" :title="`AWS - ${getExperienceInfo('aws')}`" />
+                    <img src="/assets/images/postgresql.svg" :class="['floating-logo', 'postgresql', hoverEffect]" :title="`PostgreSQL - ${getExperienceInfo('postgresql')}`" />
                     
                 </div>
             </div>
