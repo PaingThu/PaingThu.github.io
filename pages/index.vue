@@ -1,7 +1,6 @@
 <template>
     <div class="page-content home-page">
         <div class="banner">
-            
             <div class="skills">
                 <div class="frontend">
                     <span :class="['floating-logo', 'nuxt-js', hoverEffect]" v-html="ICONS.nuxt" title="Nuxt.js - 1 year of experience"></span>
@@ -63,7 +62,8 @@
 <style lang="scss" scoped>
     .home-page{
         .banner{
-            @apply relative flex flex-col items-center px-4;
+            @apply relative flex flex-col-reverse items-center px-4;
+            @apply md:flex-col;
             .banner-info{
                 @apply py-8 flex flex-col-reverse gap-4 items-center;
                 @apply md:py-20 md:flex-row gap-4;
