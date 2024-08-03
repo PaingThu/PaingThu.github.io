@@ -21,13 +21,14 @@
                             </svg>
                         </span>
                     </div>
-                    <NuxtLink :class="['nav-item', route.name == 'index' ? 'active' : '']" @click="menuStatus = false" to="/">Home</NuxtLink>
-                    <NuxtLink :class="['nav-item', route.name == 'about' ? 'active' : '']" @click="menuStatus = false" to="/about">About</NuxtLink>
-                    <NuxtLink :class="['nav-item', route.name == 'skills' ? 'active' : '']" @click="menuStatus = false" to="/skills">Skills</NuxtLink>
-                    <NuxtLink :class="['nav-item', route.name == 'education' ? 'active' : '']" @click="menuStatus = false" to="/education">Education</NuxtLink>
-                    <NuxtLink :class="['nav-item', route.name == 'work' ? 'active' : '']" @click="menuStatus = false" to="/work">Work</NuxtLink>
-                    <NuxtLink :class="['nav-item', route.name == 'experience' ? 'active' : '']" @click="menuStatus = false" to="/experience">Experience</NuxtLink>
-                    <NuxtLink :class="['nav-item', route.name == 'contact' ? 'active' : '']" @click="menuStatus = false" to="/contact">Contact</NuxtLink>
+                    <NuxtLink class="nav-item" @click="menuStatus = false" to="/">Home</NuxtLink>
+                    <NuxtLink class="nav-item" @click="menuStatus = false" to="/about">About</NuxtLink>
+                    <NuxtLink class="nav-item" @click="menuStatus = false" to="/skills">Skills</NuxtLink>
+                    <NuxtLink class="nav-item" @click="menuStatus = false" to="/education">Education</NuxtLink>
+                    <NuxtLink class="nav-item" @click="menuStatus = false" to="/work">Work</NuxtLink>
+                    <NuxtLink class="nav-item" @click="menuStatus = false" to="/experience">Experience</NuxtLink>
+                    <NuxtLink class="nav-item" @click="menuStatus = false" to="/contact">Contact</NuxtLink>
+                    <NuxtLink :class="['nav-item', route.name.includes('codelab') ? 'active' : '']" @click="menuStatus = false" to="/codelab">Codelab</NuxtLink>
                 </div>
             </div>
         </div>
@@ -37,12 +38,13 @@
 <script setup>
     const route = useRoute()
     const menuStatus = ref(false)
+    const { x,y } = useMouse()
 </script>
 
 <style lang="scss" scoped>
     //md: means from ≥768px
     nav{
-        @apply sticky top-0 shadow px-4 z-50;
+        @apply sticky top-0 shadow px-4 z-50 bg-white;
         .cover{
             @apply absolute top-0 left-0 w-full h-screen bg-slate-700/50 z-10;
             @apply md:hidden;
@@ -50,7 +52,7 @@
         .nav-bar{
             @apply flex container mx-auto py-2;
             .brand{
-                @apply flex flex-col;
+                @apply flex flex-col font-bold;
             }
             .mobile-menu{
                 @apply flex items-center ms-auto;
@@ -66,7 +68,7 @@
                         @apply active:bg-slate-300;
                         @apply md:hover:underline md:hover:underline-offset-8 md:border-b-0;
                     }
-                    .nav-item.active{
+                    .nav-item.active, .nav-item.router-link-active{
                         @apply no-underline;
                         @apply md:underline md:underline-offset-8;
                     }

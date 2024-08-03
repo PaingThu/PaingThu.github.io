@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="page-content">
         Skills
     </div>
 </template>
@@ -9,5 +9,7 @@
 </script>
 
 <style lang="scss" scoped>
-
+    .page-content{
+        @apply container mx-auto;
+    }
 </style>

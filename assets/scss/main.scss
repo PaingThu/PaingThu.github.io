@@ -23,7 +23,10 @@ body{
         @apply text-[#4f5b93];
     }
     .page-content{
-        @apply min-h-[calc(100vh-120px)];
+        @apply min-h-[calc(100vh-115.2px)];
+    }
+    .page-content.cl{
+        @apply container mx-auto;
     }
     .floating-logo{
         svg{
@@ -31,5 +34,53 @@ body{
             @apply md:w-[75px] md:h-[75px];
         }
     }
-    
+    img.floating-logo{
+        @apply w-[35px] h-[35px];
+        @apply md:w-[75px] md:h-[75px];
+    }
+    details{
+        @apply shadow; 
+        summary{
+            @apply list-none flex flex-wrap items-center cursor-pointer;
+            h5{
+                @apply font-bold flex flex-1 p-3;
+            }
+            .s-status{
+                @apply flex items-center justify-center w-10;
+                .s-arrow{
+                    @apply border-8 border-transparent border-l-gray-600 rotate-90 transition-transform origin-left;
+                }
+            }
+        }
+        .d-content{
+            @apply p-3;
+        }
+    }
+    form{
+        @apply flex flex-col gap-3;
+        .each-input{
+            input{
+                @apply border rounded px-3 py-2;
+            }
+        }
+    }
+    small{
+        @apply text-slate-500;
+    }
+    small.note{
+        @apply text-sky-600;
+    }
+    pre{
+        @apply relative overflow-x-auto;
+    }
+    code{
+        @apply text-xs flex flex-col gap-3 whitespace-pre;
+    }
+    .code-box{
+        @apply relative bg-slate-300 p-4;
+    }
+    .page-content.cl{
+        @apply p-4;
+    }
+
 }
