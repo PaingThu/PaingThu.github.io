@@ -21,12 +21,12 @@
                             </svg>
                         </span>
                     </div>
-                    <NuxtLink class="nav-item" @click="menuStatus = false" to="/">Home</NuxtLink>
-                    <NuxtLink class="nav-item" @click="menuStatus = false" to="/about">About</NuxtLink>
-                    <NuxtLink class="nav-item" @click="menuStatus = false" to="/skills">Skills</NuxtLink>
-                    <NuxtLink class="nav-item" @click="menuStatus = false" to="/education">Education</NuxtLink>
-                    <NuxtLink class="nav-item" @click="menuStatus = false" to="/work-experience">Work Experience</NuxtLink>
-                    <NuxtLink class="nav-item" @click="menuStatus = false" to="/contact">Contact</NuxtLink>
+                    <NuxtLink class="nav-item" @click="menuStatus = false" to="/">It's me</NuxtLink>
+                    <!-- <NuxtLink class="nav-item" @click="menuStatus = false" to="/about">About</NuxtLink> -->
+                    <!-- <NuxtLink class="nav-item" @click="menuStatus = false" to="/skills">Skills</NuxtLink> -->
+                    <!-- <NuxtLink class="nav-item" @click="menuStatus = false" to="/education">Education</NuxtLink> -->
+                    <!-- <NuxtLink class="nav-item" @click="menuStatus = false" to="/work-experience">Work Experience</NuxtLink> -->
+                    <!-- <NuxtLink class="nav-item" @click="menuStatus = false" to="/contact">Contact</NuxtLink> -->
                     <NuxtLink :class="['nav-item', route.name.includes('codelab') ? 'active' : '']" @click="menuStatus = false" to="/codelab">Codelab</NuxtLink>
                 </div>
             </div>

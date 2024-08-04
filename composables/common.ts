@@ -1,7 +1,8 @@
 export const SNS = {
     linkedin: `https://www.linkedin.com/in/mawpaingthu/`,
     github: `https://github.com/PaingThu`,
-    teams: `https://teams.live.com/l/invite/FEAFnUA9gmLB_MC1AM`
+    teams: `https://teams.live.com/l/invite/FEAFnUA9gmLB_MC1AM`,
+    gmail: "mailto: paingmawthu@gmail.com"
 }
 
 export const VueUseSubNav = [

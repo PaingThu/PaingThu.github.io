@@ -38,6 +38,9 @@
                         <NuxtLink class="sns-icon" :to="SNS.teams" title="Please don't hesitate to contact me." target="_blank">
                             <span class="svg-icon" v-html="ICONS.teams"></span>
                         </NuxtLink>
+                        <NuxtLink class="sns-icon" :to="SNS.gmail" title="Please don't hesitate to contact me." target="_blank">
+                            <span class="svg-icon" v-html="ICONS.gmail"></span>
+                        </NuxtLink>
                     </div>
                 </div>
                 <div class="pp">
@@ -65,7 +68,7 @@
             @apply relative flex flex-col-reverse items-center px-4;
             @apply md:flex-col;
             .banner-info{
-                @apply py-8 flex flex-col-reverse gap-4 items-center;
+                @apply relative py-8 flex flex-col-reverse gap-4 items-center;
                 @apply md:py-20 md:flex-row gap-4;
                 .pp{
                     @apply bg-slate-300 rounded-full p-3 shadow-lg;
@@ -89,7 +92,7 @@
                     .sns{
                         @apply inline-flex items-center gap-3 ms-auto;
                         .sns-icon{
-                            @apply shadow p-1 rounded-full border border-white;
+                            @apply shadow p-1 rounded-full border border-white cursor-pointer;
                             @apply hover:border-slate-300 hover:shadow-none hover:bg-slate-100 ;
                         }
                     }
