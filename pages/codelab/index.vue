@@ -15,14 +15,22 @@
                         <div class="cli-brand">
                             <span class="clib-icon" v-html="fItem.icon"></span>
                             <span>{{ fItem.title }}</span>
-                            <small>{{ getExperienceInfo(fItem.id) }}</small>
                         </div>
+                        <small>{{ getExperienceInfo(fItem.id) }}</small>
                     </NuxtLink>
                 </div>
             </div>
             <div class="backend">
                 <h4>Backend Development</h4>
                 <div class="clf-items">
+                    <NuxtLink class="cl-item" v-for="(bItem, fIndex) in BACKEND" :key="fIndex" :to="`/codelab/${bItem.to}`">
+                        <div class="cli-brand">
+                            <span v-if="bItem.icon" class="clib-icon" v-html="bItem.icon"></span>
+                            <img class="img-icon" v-if="bItem.img" :src="bItem.img" alt="">
+                            <span>{{ bItem.title }}</span>
+                        </div>
+                        <small>{{ getExperienceInfo(bItem.id) }}</small>
+                    </NuxtLink>
                 </div>
             </div>
         </div>
@@ -30,9 +38,28 @@
 </template>
 
 <script setup lang="ts">
+    import slim from "@/assets/images/slim.png"
+    import composer from "@/assets/images/composer.svg"
+    import postgresql from "@/assets/images/postgresql.svg"
+    import aws from "@/assets/images/aws-2.svg"
     const FRONTEND = [
-        { id: "tailwind", title: "Tailwind", to: "tailwind", icon: ICONS.tailwind },
+        { id: "nuxt", title: "Nuxt", to: "nuxt", icon: ICONS.nuxt },
+        { id: "vue", title: "Vue", to: "vue", icon: ICONS.vue },
         { id: "vueuse", title: "VueUse", to: "vueuse", icon: ICONS.vueuse },
+        { id: "javascript", title: "Javascript", to: "javascript", icon: ICONS.js },
+        { id: "typescript", title: "Typescript", to: "typescript", icon: ICONS.ts },
+        { id: "tailwind", title: "Tailwind", to: "tailwind", icon: ICONS.tailwind },
+        { id: "bootstrap", title: "Bootstrap", to: "bootstrap", icon: ICONS.bootstrap },
+        { id: "sass", title: "SASS", to: "sass", icon: ICONS.sass },
+    ]
+    const BACKEND = [
+        { id: "laravel", title: "laravel", to: "laravel", icon: ICONS.laravel },
+        { id: "php", title: "PHP", to: "php", icon: ICONS.php },
+        { id: "slim", title: "SLIM", to: "slim", img: slim },
+        { id: "mysql", title: "MySQL", to: "mysql", icon: ICONS.mysql },
+        { id: "composer", title: "Composer", to: "composer", img: composer },
+        { id: "aws", title: "aws", to: "aws", img: aws },
+        { id: "postgresql", title: "PostgreSQL", to: "postgresql", img: postgresql },
     ]
 </script>
 
@@ -57,14 +84,12 @@
                     @apply grid grid-cols-1 gap-3;
                     @apply md:grid-cols-3;
                     .cl-item{
-                        @apply flex flex-col items-center p-3 border rounded cursor-pointer;
+                        @apply flex flex-col gap-1 items-center p-3 border rounded cursor-pointer;
+                        @apply hover:shadow;
                         .cli-brand{
                             @apply flex flex-col items-center font-bold;
                             .clib-icon{
-                                @apply flex items-center justify-center w-8;
-                                svg{
-                                    @apply w-full;
-                                }
+                                @apply flex items-center justify-center w-8 h-8 mb-1;
                             }
                         }
                         .cli-description{

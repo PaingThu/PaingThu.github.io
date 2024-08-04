@@ -25,8 +25,7 @@
                     <NuxtLink class="nav-item" @click="menuStatus = false" to="/about">About</NuxtLink>
                     <NuxtLink class="nav-item" @click="menuStatus = false" to="/skills">Skills</NuxtLink>
                     <NuxtLink class="nav-item" @click="menuStatus = false" to="/education">Education</NuxtLink>
-                    <NuxtLink class="nav-item" @click="menuStatus = false" to="/work">Work</NuxtLink>
-                    <NuxtLink class="nav-item" @click="menuStatus = false" to="/experience">Experience</NuxtLink>
+                    <NuxtLink class="nav-item" @click="menuStatus = false" to="/work-experience">Work Experience</NuxtLink>
                     <NuxtLink class="nav-item" @click="menuStatus = false" to="/contact">Contact</NuxtLink>
                     <NuxtLink :class="['nav-item', route.name.includes('codelab') ? 'active' : '']" @click="menuStatus = false" to="/codelab">Codelab</NuxtLink>
                 </div>

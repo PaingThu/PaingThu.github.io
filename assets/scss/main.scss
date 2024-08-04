@@ -85,11 +85,11 @@ body{
             @apply flex items-center gap-3 py-4;
             .clt-icon{
                 @apply text-[2rem];
-                svg{
-                    @apply w-8;
-                }
             }
         }
+    }
+    svg, img.img-icon{
+        @apply w-8 h-8;
     }
 
 }

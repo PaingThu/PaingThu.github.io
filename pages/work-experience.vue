@@ -1,6 +1,6 @@
 <template>
     <div class="page-content">
-        Experience
+        Work Experience
     </div>
 </template>
 
