@@ -17,9 +17,8 @@
                 {{ sn.label }}
             </NuxtLink>
         </SubNav>
-        <div class="functions">
-            <!-- <VueuseCoreCreateGlobalState /> -->
-
+        <div class="cl-content">
+            
         </div>
     </div>
 </template>
