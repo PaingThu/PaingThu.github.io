@@ -8,7 +8,7 @@
             </span>
         </div>
         <div class="container mx-auto my-apps">
-            <router-link to="/japanese" class="app">
+            <router-link to="/hiragana" class="app">
                 <h4>Japanese</h4>
                 <h4>For</h4>
                 <h1 class="kids">
