@@ -16,7 +16,7 @@
                 <tr>
                     <td v-for="word in a_line" :key="word.romaji">
                         <span class="each-word">
-                            <span class="hiragana">{{ word.hiragana }}</span>
+                            <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
                             <small class="romaji">{{ word.romaji }}</small>
                         </span>
                     </td>
@@ -24,7 +24,7 @@
                 <tr>
                     <td v-for="word in ka_line" :key="word.romaji">
                         <span class="each-word">
-                            <span class="hiragana">{{ word.hiragana }}</span>
+                            <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
                             <small class="romaji">{{ word.romaji }}</small>
                         </span>
                     </td>
@@ -32,7 +32,7 @@
                 <tr>
                     <td v-for="word in sa_line" :key="word.romaji">
                         <span class="each-word">
-                            <span class="hiragana">{{ word.hiragana }}</span>
+                            <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
                             <small class="romaji">{{ word.romaji }}</small>
                         </span>
                     </td>
@@ -40,7 +40,7 @@
                 <tr>
                     <td v-for="word in ta_line" :key="word.romaji">
                         <span class="each-word">
-                            <span class="hiragana">{{ word.hiragana }}</span>
+                            <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
                             <small class="romaji">{{ word.romaji }}</small>
                         </span>
                     </td>
@@ -48,7 +48,7 @@
                 <tr>
                     <td v-for="word in na_line" :key="word.romaji">
                         <span class="each-word">
-                            <span class="hiragana">{{ word.hiragana }}</span>
+                            <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
                             <small class="romaji">{{ word.romaji }}</small>
                         </span>
                     </td>
@@ -56,7 +56,7 @@
                 <tr>
                     <td v-for="word in ha_line" :key="word.romaji">
                         <span class="each-word">
-                            <span class="hiragana">{{ word.hiragana }}</span>
+                            <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
                             <small class="romaji">{{ word.romaji }}</small>
                         </span>
                     </td>
@@ -64,7 +64,7 @@
                 <tr>
                     <td v-for="word in ma_line" :key="word.romaji">
                         <span class="each-word">
-                            <span class="hiragana">{{ word.hiragana }}</span>
+                            <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
                             <small class="romaji">{{ word.romaji }}</small>
                         </span>
                     </td>
@@ -72,7 +72,7 @@
                 <tr>
                     <td v-for="word in ya_line" :key="word.romaji">
                         <span class="each-word">
-                            <span class="hiragana">{{ word.hiragana }}</span>
+                            <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
                             <small class="romaji">{{ word.romaji }}</small>
                         </span>
                     </td>
@@ -80,7 +80,7 @@
                 <tr>
                     <td v-for="word in ra_line" :key="word.romaji">
                         <span class="each-word">
-                            <span class="hiragana">{{ word.hiragana }}</span>
+                            <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
                             <small class="romaji">{{ word.romaji }}</small>
                         </span>
                     </td>
@@ -88,7 +88,7 @@
                 <tr>
                     <td v-for="word in wa_line" :key="word.romaji">
                         <span class="each-word">
-                            <span class="hiragana">{{ word.hiragana }}</span>
+                            <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
                             <small class="romaji">{{ word.romaji }}</small>
                         </span>
                     </td>
@@ -96,7 +96,7 @@
                 <tr>
                     <td v-for="word in n_line" :key="word.romaji">
                         <span class="each-word">
-                            <span class="hiragana">{{ word.hiragana }}</span>
+                            <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
                             <small class="romaji">{{ word.romaji }}</small>
                         </span>
                     </td>
@@ -130,7 +130,7 @@
     ]
     const ta_line = [
         { romaji: "ta", hiragana: "た" },
-        { romaji: "ti", hiragana: "ち" },
+        { romaji: "chi", hiragana: "ち" },
         { romaji: "tu", hiragana: "つ" },
         { romaji: "te", hiragana: "て" },
         { romaji: "to", hiragana: "と" },
@@ -180,6 +180,7 @@
     const n_line = [
         { romaji: "n", hiragana: "ん" }
     ]
+    const selectedWord = ref("")
 </script>
 
 <style lang="scss" scoped>
@@ -200,8 +201,11 @@
                     .each-word{
                         @apply flex flex-col items-center;
                         span.hiragana{
-                            @apply text-3xl font-bold p-2;
+                            @apply text-3xl font-bold p-2 cursor-pointer;
                             @apply md:text-6xl;
+                        }
+                        span.hiragana.selected{
+                            @apply text-orange-300 shadow;
                         }
                         small.romaji{
                         }
