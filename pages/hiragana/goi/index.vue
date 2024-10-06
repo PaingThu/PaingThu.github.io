@@ -61,7 +61,7 @@
             .each-goi{
                 @apply flex flex-col items-center bg-green-300 rounded p-3 cursor-pointer;
                 img{
-                    @apply w-[129.5px] h-[129.5px];
+                    @apply max-w-full w-[129.5px] h-[129.5px];
                     @apply md:w-[198px] md:h-[198px];
                 }
                 .jp{

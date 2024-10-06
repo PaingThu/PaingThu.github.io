@@ -1,7 +1,7 @@
 <template>
     <div class="classroom-layout">
         <HiraganaMenu />
-        <div class="flex-auto">
+        <div class="flex-1">
             <!-- <Nav /> -->
             <slot />
         </div>

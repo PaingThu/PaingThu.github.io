@@ -1,6 +1,12 @@
 <template>
     <div class="side-menu">
         <div class="page-title">
+            <router-link to="/">
+                <img class="home" src="/assets/images/pp.png" alt="">
+            </router-link>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </svg>
             <div class="pt">
                 <h4><span class="text-3xl">J</span>apanese</h4>
                 <h4>For</h4>
@@ -61,10 +67,13 @@
 <style lang="scss" scoped>
     .side-menu{
         @apply sticky top-0 flex-col shadow w-full bg-white;
-        @apply md:h-screen md:w-[223px];
+        @apply md:h-screen md:w-fit;
         .page-title{
-            @apply flex items-center h-[64px] shadow-sm px-3;
+            @apply flex gap-3 items-center h-[64px] shadow-sm px-3;
             @apply md:justify-center;
+            .home{
+                @apply w-[30px] bg-slate-300 rounded-full p-1;
+            }
             .pt{
                 @apply flex justify-center items-baseline gap-2;
                 h4{
