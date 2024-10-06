@@ -29,7 +29,7 @@ export default defineNuxtConfig({
     modules: ['@vueuse/nuxt', "@nuxt/image", 'nuxt-gtag'],
 
     gtag: {
-        id: 'GTM-5JHCZZRP'
+        id: 'G-TG3BLB3MBG'
 
     }
 })
