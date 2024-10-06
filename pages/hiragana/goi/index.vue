@@ -4,7 +4,7 @@
         <div class="goi-list">
             <div v-for="goi in goi_list" :key="`${goi.id}_goi`" class="each-goi" :class="selectedGoi==goi.romaji ? 'selected' : ''" @click="selectedGoi=goi.romaji">
                 <img :src="goi.img" alt="">
-                <span class="jp">{{ goi.jp }}</span>
+                <span class="jp mt-3">{{ goi.jp }}</span>
                 <span class="others">
                     <small class="en">{{ goi.en }}</small>
                     <small class="mm">{{ goi.mm }}</small>
@@ -15,15 +15,20 @@
 </template>
 
 <script setup>
+    import ie from "../../../assets/images/ie.jpg"
+    import ue from "../../../assets/images/ue.jpg"
+    import iku from "../../../assets/images/iku.jpg"
+    import ike from "../../../assets/images/ike.jpg"
+    import eki from "../../../assets/images/eki.jpg"
     definePageMeta({
         layout: 'classroom'
     })
     const goi_list = [
-        { romaji: "ie", jp: "いえ", mm: "အိမ်", en: "house", img:"" },
-        { romaji: "ue", jp: "うえ", mm: "အပေါ်", en: "up", img:"" },
-        { romaji: "iku", jp: "いく", mm: "သွားသည်", en: "go", img:"" },
-        { romaji: "ike", jp: "いけ", mm: "ရေကန်", en: "pong", img:"" },
-        { romaji: "eki", jp: "えき", mm: "ဘူတာ", en: "train", img:"" },
+        { romaji: "ie", jp: "いえ", mm: "အိမ်", en: "house", img: ie },
+        { romaji: "ue", jp: "うえ", mm: "အပေါ်", en: "up", img: ue },
+        { romaji: "iku", jp: "いく", mm: "သွားသည်", en: "go", img: iku },
+        { romaji: "ike", jp: "いけ", mm: "ရေကန်", en: "pong", img: ike },
+        { romaji: "eki", jp: "えき", mm: "ဘူတာ", en: "train", img: eki },
         { romaji: "kau", jp: "かう", mm: "ဝယ်သည်", en: "buy", img:"" },
         { romaji: "kao", jp: "かお", mm: "မျက်နှာ", en: "face", img:"" },
         { romaji: "asa", jp: "あさ", mm: "မနက်ခင်း", en: "morning", img:"" },
@@ -55,6 +60,10 @@
             @apply md:grid-cols-5;
             .each-goi{
                 @apply flex flex-col items-center bg-green-300 rounded p-3 cursor-pointer;
+                img{
+                    @apply w-[129.5px] h-[129.5px];
+                    @apply md:w-[198px] md:h-[198px];
+                }
                 .jp{
                     @apply text-3xl font-bold;
                 }
