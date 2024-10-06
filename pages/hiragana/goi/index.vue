@@ -20,6 +20,11 @@
     import iku from "../../../assets/images/iku.jpg"
     import ike from "../../../assets/images/ike.jpg"
     import eki from "../../../assets/images/eki.jpg"
+    import kau from "../../../assets/images/kau.jpg"
+    import kao from "../../../assets/images/kao.jpg"
+    import asa from "../../../assets/images/asa.jpg"
+    import ashi from "../../../assets/images/ashi.jpg"
+    import ase from "../../../assets/images/ase.jpg"
     definePageMeta({
         layout: 'classroom'
     })
@@ -29,11 +34,11 @@
         { romaji: "iku", jp: "いく", mm: "သွားသည်", en: "go", img: iku },
         { romaji: "ike", jp: "いけ", mm: "ရေကန်", en: "pong", img: ike },
         { romaji: "eki", jp: "えき", mm: "ဘူတာ", en: "train", img: eki },
-        { romaji: "kau", jp: "かう", mm: "ဝယ်သည်", en: "buy", img:"" },
-        { romaji: "kao", jp: "かお", mm: "မျက်နှာ", en: "face", img:"" },
-        { romaji: "asa", jp: "あさ", mm: "မနက်ခင်း", en: "morning", img:"" },
-        { romaji: "ashi", jp: "あし", mm: "ခြေထောက်", en: "leg", img:"" },
-        { romaji: "ase", jp: "あせ", mm: "ချွေး", en: "sweat", img:"" },
+        { romaji: "kau", jp: "かう", mm: "ဝယ်သည်", en: "buy", img: kau },
+        { romaji: "kao", jp: "かお", mm: "မျက်နှာ", en: "face", img: kao },
+        { romaji: "asa", jp: "あさ", mm: "မနက်ခင်း", en: "morning", img: asa },
+        { romaji: "ashi", jp: "あし", mm: "ခြေထောက်", en: "leg", img: ashi },
+        { romaji: "ase", jp: "あせ", mm: "ချွေး", en: "sweat", img: ase },
         { romaji: "ishi", jp: "いし", mm: "ကျောက်တုန်း", en: "stone", img:"" },
         { romaji: "osu", jp: "おす", mm: "နှိပ်သည်", en: "push", img:"" },
         { romaji: "suki", jp: "すき", mm: "ကြိုက်သည်", en: "like", img:"" },
