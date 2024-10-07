@@ -97,6 +97,12 @@
 </template>
 
 <script setup>
+    useHead({
+        title: 'Japanese For KIDS: HIRAGANA',
+        meta: [
+            { name: 'description', content: 'Japanese For KIDS: HIRAGANA' }
+        ],
+    })
     const selectedWord = ref("")
     definePageMeta({
         layout: 'classroom'

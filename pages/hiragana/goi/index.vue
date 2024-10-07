@@ -15,6 +15,12 @@
 </template>
 
 <script setup>
+    useHead({
+        title: 'Japanese For KIDS: HIRAGANA-GOI',
+        meta: [
+            { name: 'description', content: 'Japanese For KIDS: HIRAGANA GOI' }
+        ],
+    })
     import ie from "../../../assets/images/ie.jpg"
     import ue from "../../../assets/images/ue.jpg"
     import iku from "../../../assets/images/iku.jpg"

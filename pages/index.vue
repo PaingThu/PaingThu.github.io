@@ -25,7 +25,13 @@
 </template>
 
 <script setup>
-import Banner from '~/components/Banner.vue';
+    import Banner from '~/components/Banner.vue';
+    useHead({
+        title: 'MAW PAING THU',
+        meta: [
+            { name: 'description', content: 'I’m a passionate Full Stack developer with expertise in Vue.js, Nuxt.js, and PHP API development. Let’s connect and create something remarkable together! Feel free to reach out—I’m always up for a coding adventure.' }
+        ],
+    })
     const hoverEffect = ref("")
 </script>
 

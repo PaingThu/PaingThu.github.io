@@ -42,6 +42,12 @@
     import composer from "@/assets/images/composer.svg"
     import postgresql from "@/assets/images/postgresql.svg"
     import aws from "@/assets/images/aws-2.svg"
+    useHead({
+        title: 'MAW PAING THU: Codelab',
+        meta: [
+            { name: 'description', content: 'Welcome to my codelab' }
+        ],
+    })
     const FRONTEND = [
         { id: "nuxt", title: "Nuxt", to: "nuxt", icon: ICONS.nuxt },
         { id: "vue", title: "Vue", to: "vue", icon: ICONS.vue },
