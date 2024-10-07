@@ -31,6 +31,11 @@
     import asa from "../../../assets/images/asa.jpg"
     import ashi from "../../../assets/images/ashi.jpg"
     import ase from "../../../assets/images/ase.jpg"
+    import ishi from "../../../assets/images/ishi.jpg"
+    import osu from "../../../assets/images/osu.jpg"
+    import sushi from "../../../assets/images/sushi.jpg"
+    import seki from "../../../assets/images/seki.jpg"
+    import ichi from "../../../assets/images/ichi.jpg"
     definePageMeta({
         layout: 'classroom'
     })
@@ -45,12 +50,11 @@
         { romaji: "asa", jp: "あさ", mm: "မနက်ခင်း", en: "morning", img: asa },
         { romaji: "ashi", jp: "あし", mm: "ခြေထောက်", en: "leg", img: ashi },
         { romaji: "ase", jp: "あせ", mm: "ချွေး", en: "sweat", img: ase },
-        { romaji: "ishi", jp: "いし", mm: "ကျောက်တုန်း", en: "stone", img:"" },
-        { romaji: "osu", jp: "おす", mm: "နှိပ်သည်", en: "push", img:"" },
-        { romaji: "suki", jp: "すき", mm: "ကြိုက်သည်", en: "like", img:"" },
-        { romaji: "suhi", jp: "すし", mm: "ဆူရှီ", en: "suhi", img:"" },
-        { romaji: "seki", jp: "せき", mm: "ချောင်းဆိုး", en: "cough", img:"" },
-        { romaji: "ichi", jp: "いち", mm: "တစ်", en: "one", img:"" },
+        { romaji: "ishi", jp: "いし", mm: "ကျောက်တုန်း", en: "stone", img: ishi },
+        { romaji: "osu", jp: "おす", mm: "နှိပ်သည်", en: "push", img: osu },
+        { romaji: "sushi", jp: "すし", mm: "ဆူရှီ", en: "sushi", img: sushi },
+        { romaji: "seki", jp: "せき", mm: "ချောင်းဆိုး", en: "cough", img: seki },
+        { romaji: "ichi", jp: "いち", mm: "တစ်", en: "one", img: ichi },
         { romaji: "itsu", jp: "いつ", mm: "ဘယ်တော့လဲ", en: "when", img:"" },
         { romaji: "uta", jp: "うた", mm: "သီချင်း", en: "song", img:"" },
         { romaji: "uchi", jp: "うち", mm: "အိမ်", en: "home", img:"" },
