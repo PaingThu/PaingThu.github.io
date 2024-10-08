@@ -1,11 +1,20 @@
 <template>
     <div class="goi">
-        <h3>ごい</h3>
+        <TitleBar>
+                <template #title>
+                    【ごい】ひらがな
+                </template>
+                <template #levels>
+                    <button @click="selectedLevel=1" :class="selectedLevel==1 ? 'current-level' : ''">1</button>
+                    <button @click="selectedLevel=2" :class="selectedLevel==2 ? 'current-level' : ''">2</button>
+                    <button @click="selectedLevel=3" :class="selectedLevel==3 ? 'current-level' : ''">3</button>
+                </template>
+            </TitleBar>
         <div class="goi-list">
             <div v-for="goi in goi_list" :key="`${goi.id}_goi`" class="each-goi" :class="selectedGoi==goi.romaji ? 'selected' : ''" @click="selectedGoi=goi.romaji">
-                <img :src="goi.img" alt="">
-                <span class="jp mt-3">{{ goi.jp }}</span>
-                <span class="others">
+                <img v-if="selectedLevel != 2" :src="goi.img" alt="">
+                <span  v-if="selectedLevel != 3" class="jp mt-3">{{ goi.jp }}</span>
+                <span v-if="selectedLevel != 3" class="others">
                     <small class="en">{{ goi.en }}</small>
                     <small class="mm">{{ goi.mm }}</small>
                 </span>
@@ -36,12 +45,15 @@
     import sushi from "../../../assets/images/sushi.jpg"
     import seki from "../../../assets/images/seki.jpg"
     import ichi from "../../../assets/images/ichi.jpg"
+    import uta from "../../../assets/images/uta.jpg"
+    import uchi from "../../../assets/images/uchi.jpg"
+    import kutsu from "../../../assets/images/kutsu.jpg"
     definePageMeta({
         layout: 'classroom'
     })
     const goi_list = [
         { romaji: "ie", jp: "いえ", mm: "အိမ်", en: "house", img: ie },
-        { romaji: "ue", jp: "うえ", mm: "အပေါ်", en: "up", img: ue },
+        { romaji: "ue", jp: "うえ", mm: "အပေါ်", en: "above", img: ue },
         { romaji: "iku", jp: "いく", mm: "သွားသည်", en: "go", img: iku },
         { romaji: "ike", jp: "いけ", mm: "ရေကန်", en: "pong", img: ike },
         { romaji: "eki", jp: "えき", mm: "ဘူတာ", en: "train", img: eki },
@@ -55,15 +67,14 @@
         { romaji: "sushi", jp: "すし", mm: "ဆူရှီ", en: "sushi", img: sushi },
         { romaji: "seki", jp: "せき", mm: "ချောင်းဆိုး", en: "cough", img: seki },
         { romaji: "ichi", jp: "いち", mm: "တစ်", en: "one", img: ichi },
-        { romaji: "itsu", jp: "いつ", mm: "ဘယ်တော့လဲ", en: "when", img:"" },
-        { romaji: "uta", jp: "うた", mm: "သီချင်း", en: "song", img:"" },
-        { romaji: "uchi", jp: "うち", mm: "အိမ်", en: "home", img:"" },
-        { romaji: "kutsu", jp: "くつ", mm: "ဖိနပ်", en: "shoe", img:"" },
-        { romaji: "shita", jp: "した", mm: "အောက်", en: "under", img:"" },
+        { romaji: "uta", jp: "うた", mm: "သီချင်း", en: "song", img: uta },
+        { romaji: "uchi", jp: "うち", mm: "အိမ်", en: "home", img: uchi },
+        { romaji: "kutsu", jp: "くつ", mm: "ဖိနပ်", en: "shoe", img: kutsu },
         { romaji: "shichi", jp: "しち", mm: "ခုနှစ်", en: "seven", img:"" },
         { romaji: "soto", jp: "そと", mm: "အပြင်", en: "outside", img:"" },
     ]
     const selectedGoi = ref("")
+    const selectedLevel = ref(1)
 </script>
 
 <style lang="scss" scoped>

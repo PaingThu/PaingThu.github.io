@@ -22,7 +22,7 @@ export const sa_line = [
 export const ta_line = [
     { romaji: "ta", hiragana: "た" },
     { romaji: "chi", hiragana: "ち" },
-    { romaji: "tu", hiragana: "つ" },
+    { romaji: "tsu", hiragana: "つ" },
     { romaji: "te", hiragana: "て" },
     { romaji: "to", hiragana: "と" },
 ]
@@ -69,5 +69,5 @@ export const wa_line = [
     { romaji: "wo", hiragana: "を" },
 ]
 export const n_line = [
-    { romaji: "n", hiragana: "ん" }
+    { romaji: "~n", hiragana: "ん" }
 ]
