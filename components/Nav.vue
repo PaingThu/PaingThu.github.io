@@ -29,6 +29,7 @@
                     <!-- <NuxtLink class="nav-item" @click="menuStatus = false" to="/contact">Contact</NuxtLink> -->
                     <NuxtLink :class="['nav-item', route.name.includes('codelab') ? 'active' : '']" @click="menuStatus = false" to="/codelab">Codelab</NuxtLink>
                     <NuxtLink class="nav-item" @click="menuStatus = false" to="/hiragana">Japanese For KIDS</NuxtLink>
+                    <NuxtLink class="nav-item" @click="menuStatus = false" to="/maw-gpt">MAW-GPT</NuxtLink>
                 </div>
             </div>
         </div>

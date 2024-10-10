@@ -11,3 +11,9 @@ export const userProfileWithoutPersitence = createGlobalState(() =>{
     })
     return profile
 })
+
+export const searchCount = createGlobalState(() =>
+    useStorage('searchCount', {
+        count: 5
+    })
+)

@@ -1,4 +1,5 @@
 import { describe } from "node:test";
+const { API_KEY } = process.env;
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -29,7 +30,10 @@ export default defineNuxtConfig({
     modules: ['@vueuse/nuxt', "@nuxt/image", 'nuxt-gtag'],
 
     gtag: {
-        id: 'G-TG3BLB3MBG'
+        id: process.env.GTAG_ID
 
-    }
+    },
+    runtimeConfig: {
+        apiKey: process.env.API_KEY,
+    },
 })

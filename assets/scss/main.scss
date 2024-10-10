@@ -74,6 +74,14 @@ body{
             }
         }
     }
+    .each-input{
+        input{
+            @apply max-w-full border rounded px-3 py-2;
+        }
+        textarea{
+            @apply max-w-full border rounded px-3 py-2;
+        }
+    }
     small{
         @apply text-slate-500;
     }
@@ -100,6 +108,13 @@ body{
     }
     svg, img.img-icon{
         @apply w-8 h-8;
+    }
+
+    .maw-gpt-logo{
+        @apply relative bg-blue-300 border border-orange-300 p-3 mt-3 rounded shadow;
+        img{
+            @apply absolute top-[-22px] right-[13px] w-10 h-10 rounded-full bg-blue-300 p-1;
+        }
     }
 
 }
