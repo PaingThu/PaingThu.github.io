@@ -1,5 +1,11 @@
 import OpenAI from 'openai';
 export default defineEventHandler(async (event) => { 
+    handleCors(event, {
+        methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
+        allowHeaders: '*',
+        origin: "*",
+        credentials: true
+    })
     const body = await readBody(event)
     const config = useRuntimeConfig()
     const openai = new OpenAI({
