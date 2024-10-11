@@ -81,7 +81,7 @@
         
         limit.value = sCount.value.count
         isLoading.value = true
-        const response = await $fetch("/api/mawgpt",{
+        const response = await $fetch("/api/mawgpt/",{
             method: 'POST',
             body: payload
         })
