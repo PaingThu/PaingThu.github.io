@@ -81,14 +81,17 @@
         
         limit.value = sCount.value.count
         isLoading.value = true
-        const response = await $fetch("/api/mawgpt/",{
-            method: 'POST',
+        const responseData = await useFetch("/api/mawgpt/",{
+            method: 'post',
             body: payload
         })
-        sCount.value.count--
+        console.log(responseData.status.value)
         isLoading.value = false
+        if(responseData.status.value === "success"){
+            sCount.value.count--
+            answer.value = responseData.data
+        }
         
-        answer.value = response
     }
 
     const clickImg = () => {
