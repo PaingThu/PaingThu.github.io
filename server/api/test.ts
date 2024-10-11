@@ -1,6 +1,5 @@
 import OpenAI from 'openai';
-export default defineEventHandler(async (event) => {  1  
-    console.log("event ", event)
+export default defineEventHandler(async (event) => { 
     const body = await readBody(event)
     const config = useRuntimeConfig()
     const openai = new OpenAI({
