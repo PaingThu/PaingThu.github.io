@@ -78,13 +78,14 @@
             payload.question = question.value
         }
         
-        sCount.value.count--
+        
         limit.value = sCount.value.count
         isLoading.value = true
-        const response = await $fetch("/api/test",{
+        const response = await $fetch("/api/mawgpt",{
             method: 'POST',
-             body: payload
+            body: payload
         })
+        sCount.value.count--
         isLoading.value = false
         
         answer.value = response
