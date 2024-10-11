@@ -81,7 +81,7 @@
         
         limit.value = sCount.value.count
         isLoading.value = true
-        const responseData = await useFetch("/api/mawgpt/",{
+        const responseData = await useFetch("/api/mawgpt",{
             method: 'post',
             body: payload
         })
