@@ -31,7 +31,6 @@ export default defineNuxtConfig({
 
     gtag: {
         id: process.env.GTAG_ID
-
     },
     runtimeConfig: {
         apiKey: process.env.API_KEY,

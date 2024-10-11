@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
-    import OpenAI from 'openai';
+    
     import { useBase64 } from '@vueuse/core'
     const clickImgCount = ref(0)
     const image = ref("")
@@ -44,11 +44,6 @@
     const error = ref("")
     const defaultQue = 'What is this image.'
     const limit = ref(5)
-    const config = useRuntimeConfig();
-    console.log("API ", config.apiKey)
-    const openai = new OpenAI({
-        apiKey: config.apiKey
-    })
 
     const sCount = searchCount()
 
@@ -66,43 +61,33 @@
         }
         answer.value = ""
         error.value = ""
-        let content = [ 
-            { type: 'text', text: question.value ? question.value : defaultQue}
-        ]
+        let payload = {}
         if(withImage.value){
             if(image.value){
-                content.push({ type: 'image_url', image_url: {url: image.value._value} })
+                payload.image = image.value._value
             }else{
                 error.value = "If you want to search with image, please upload image or uncheck 'I will search with image.'"
                 return
             }
-        }else{
-            if(!question.value){
-                error.value = "Please ask some question."
-                return
-            }
         }
+        if(!question.value){
+            error.value = "Please ask some question."
+            return
+        }else{
+            console.log(question.value)
+            payload.question = question.value
+        }
+        
         sCount.value.count--
         limit.value = sCount.value.count
         isLoading.value = true
-        const response = await openai.chat.completions.create({
-            model: 'gpt-4o',
-            messages: [
-                {
-                    role: 'user',
-                    content: content
-                }
-            ]
+        const response = await $fetch("/api/test",{
+            method: 'POST',
+             body: payload
         })
         isLoading.value = false
-        let retResult = response.choices[0].message.content
-        let result = null
-        if(retResult.includes("json")){
-            result = JSON.parse(retResult.split('```')[1].replace("json", ""))
-        }else{
-            result = retResult
-        }
-        answer.value = result
+        
+        answer.value = response
     }
 
     const clickImg = () => {

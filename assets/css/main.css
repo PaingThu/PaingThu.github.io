@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  @apply text-slate-600;
+}
+body h1 {
+  @apply font-bold text-5xl;
+}
+body h2 {
+  @apply font-bold text-3xl;
+}
+body h3 {
+  @apply font-bold text-2xl;
+}
+body h4 {
+  @apply font-bold text-xl;
+}
+body h5 {
+  @apply text-center;
+}
+body .svg-icon {
+  @apply flex;
+}
+body .svg-icon svg {
+  @apply w-[24px] h-[24px];
+}
+body .nuxt-color {
+  @apply text-[#00c16a];
+}
+body .php-color {
+  @apply text-[#4f5b93];
+}
+body .page-content {
+  @apply min-h-[calc(100vh-115.2px)];
+}
+body .page-content.cl {
+  @apply container mx-auto;
+}
+body .floating-logo svg {
+  @apply w-[35px] h-[35px];
+  @apply md:w-[75px] md:h-[75px];
+}
+body img.floating-logo {
+  @apply w-[35px] h-[35px];
+  @apply md:w-[75px] md:h-[75px];
+}
+body details {
+  @apply shadow;
+}
+body details summary {
+  @apply list-none flex flex-wrap items-center cursor-pointer;
+}
+body details summary h5 {
+  @apply font-bold flex flex-1 p-3;
+}
+body details summary .s-status {
+  @apply flex items-center justify-center w-10;
+}
+body details summary .s-status .s-arrow {
+  @apply border-8 border-transparent border-l-gray-600 rotate-90 transition-transform origin-left;
+}
+body details .d-content {
+  @apply p-3;
+}
+body form {
+  @apply flex flex-col gap-3;
+}
+body form .each-input input {
+  @apply border rounded px-3 py-2;
+}
+body .each-input input {
+  @apply max-w-full border rounded px-3 py-2;
+}
+body .each-input textarea {
+  @apply max-w-full border rounded px-3 py-2;
+}
+body small {
+  @apply text-slate-500;
+}
+body small.note {
+  @apply text-sky-600;
+}
+body pre {
+  @apply relative overflow-x-auto;
+}
+body code {
+  @apply text-xs flex flex-col gap-3 whitespace-pre;
+}
+body .code-box {
+  @apply relative bg-slate-300 p-4;
+}
+body .page-content.cl {
+  @apply p-4;
+}
+body .page-content.cl .cl-title {
+  @apply flex items-center gap-3 py-4;
+}
+body .page-content.cl .cl-title .clt-icon {
+  @apply text-[2rem];
+}
+body svg, body img.img-icon {
+  @apply w-8 h-8;
+}
+body .maw-gpt-logo {
+  @apply relative bg-blue-300 border border-orange-300 p-3 mt-3 rounded shadow;
+}
+body .maw-gpt-logo img {
+  @apply absolute top-[-22px] right-[13px] w-10 h-10 rounded-full bg-blue-300 p-1;
+}/*# sourceMappingURL=main.css.map */
