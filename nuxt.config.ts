@@ -32,7 +32,4 @@ export default defineNuxtConfig({
     runtimeConfig: {
         apiKey: process.env.API_KEY,
     },
-    routeRules: {
-        "/server/api/**": { cache: false, swr: false }
-    },
 })
