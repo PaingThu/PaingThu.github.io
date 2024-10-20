@@ -20,7 +20,7 @@
                 </h1>
                 <img src="/assets/images/kids.svg" class="pt-4" alt="Image By Freepik">
             </router-link>
-            <router-link to="/maw-gpt" class="maw-gpt-app">
+            <!-- <router-link to="/maw-gpt" class="maw-gpt-app">
                 <div class="maw-gpt-logo">
                     <img src="/assets/images/pp.png" alt="" @click="clickImg">
                     <h3>MAW-GPT</h3> 
@@ -29,7 +29,7 @@
                     <span>Welcome to MAW-GPT. You can use MAW-GPT five times to search for text only, images only, or both.</span>
                     <span class="sec">SEARCH</span>
                 </div>
-            </router-link>
+            </router-link> -->
         </div>
     </div>
 </template>
