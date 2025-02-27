@@ -11,94 +11,97 @@
                 </template>
             </TitleBar>
             <table>
-                <tr>
-                    <td v-for="word in a_line" :key="word.romaji">
-                        <span class="each-word">
-                            <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
-                            <small v-if="selectedLevel == 1" class="romaji">{{ word.romaji }}</small>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td v-for="word in ka_line" :key="word.romaji">
-                        <span class="each-word">
-                            <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
-                            <small v-if="selectedLevel == 1" class="romaji">{{ word.romaji }}</small>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td v-for="word in sa_line" :key="word.romaji">
-                        <span class="each-word">
-                            <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
-                            <small v-if="selectedLevel == 1" class="romaji">{{ word.romaji }}</small>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td v-for="word in ta_line" :key="word.romaji">
-                        <span class="each-word">
-                            <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
-                            <small v-if="selectedLevel == 1" class="romaji">{{ word.romaji }}</small>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td v-for="word in na_line" :key="word.romaji">
-                        <span class="each-word">
-                            <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
-                            <small v-if="selectedLevel == 1" class="romaji">{{ word.romaji }}</small>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td v-for="word in ha_line" :key="word.romaji">
-                        <span class="each-word">
-                            <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
-                            <small v-if="selectedLevel == 1" class="romaji">{{ word.romaji }}</small>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td v-for="word in ma_line" :key="word.romaji">
-                        <span class="each-word">
-                            <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
-                            <small v-if="selectedLevel == 1" class="romaji">{{ word.romaji }}</small>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td v-for="word in ya_line" :key="word.romaji">
-                        <span v-if="word.hiragana" class="each-word">
-                            <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
-                            <small v-if="selectedLevel == 1" class="romaji">{{ word.romaji }}</small>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td v-for="word in ra_line" :key="word.romaji">
-                        <span class="each-word">
-                            <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
-                            <small v-if="selectedLevel == 1" class="romaji">{{ word.romaji }}</small>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td v-for="word in wa_line" :key="word.romaji">
-                        <span v-if="word.hiragana" class="each-word">
-                            <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
-                            <small v-if="selectedLevel == 1" class="romaji">{{ word.romaji }}</small>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td v-for="word in n_line" :key="word.romaji">
-                        <span class="each-word">
-                            <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
-                            <small v-if="selectedLevel == 1" class="romaji">{{ word.romaji }}</small>
-                        </span>
-                    </td>
-                </tr>
+                <tbody>
+
+                    <tr>
+                        <td v-for="word in a_line" :key="word.romaji">
+                            <span class="each-word">
+                                <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
+                                <small v-if="selectedLevel == 1" class="romaji">{{ word.romaji }}</small>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td v-for="word in ka_line" :key="word.romaji">
+                            <span class="each-word">
+                                <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
+                                <small v-if="selectedLevel == 1" class="romaji">{{ word.romaji }}</small>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td v-for="word in sa_line" :key="word.romaji">
+                            <span class="each-word">
+                                <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
+                                <small v-if="selectedLevel == 1" class="romaji">{{ word.romaji }}</small>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td v-for="word in ta_line" :key="word.romaji">
+                            <span class="each-word">
+                                <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
+                                <small v-if="selectedLevel == 1" class="romaji">{{ word.romaji }}</small>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td v-for="word in na_line" :key="word.romaji">
+                            <span class="each-word">
+                                <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
+                                <small v-if="selectedLevel == 1" class="romaji">{{ word.romaji }}</small>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td v-for="word in ha_line" :key="word.romaji">
+                            <span class="each-word">
+                                <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
+                                <small v-if="selectedLevel == 1" class="romaji">{{ word.romaji }}</small>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td v-for="word in ma_line" :key="word.romaji">
+                            <span class="each-word">
+                                <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
+                                <small v-if="selectedLevel == 1" class="romaji">{{ word.romaji }}</small>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td v-for="word in ya_line" :key="word.romaji">
+                            <span v-if="word.hiragana" class="each-word">
+                                <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
+                                <small v-if="selectedLevel == 1" class="romaji">{{ word.romaji }}</small>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td v-for="word in ra_line" :key="word.romaji">
+                            <span class="each-word">
+                                <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
+                                <small v-if="selectedLevel == 1" class="romaji">{{ word.romaji }}</small>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td v-for="word in wa_line" :key="word.romaji">
+                            <span v-if="word.hiragana" class="each-word">
+                                <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
+                                <small v-if="selectedLevel == 1" class="romaji">{{ word.romaji }}</small>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td v-for="word in n_line" :key="word.romaji">
+                            <span class="each-word">
+                                <span class="hiragana" :class="selectedWord==word.romaji?'selected':''" @click="selectedWord=word.romaji">{{ word.hiragana }}</span>
+                                <small v-if="selectedLevel == 1" class="romaji">{{ word.romaji }}</small>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
         </div>
         <div class="learn-others">
