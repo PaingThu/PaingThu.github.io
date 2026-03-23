@@ -6,6 +6,9 @@
                 Let’s connect and create something remarkable together! <br> 
                 Feel free to reach out—I’m always up for a coding adventure.
             </span>
+            <NuxtLink to="https://paingthu.github.io/our-daily-activities/" target="_blank" class="app mouse-game">
+                <i class="text-sm text-orange-500">Click here to see our daily activities with my family.</i>
+            </NuxtLink>
         </div>
         <div class="container mx-auto my-apps">
             <router-link to="/hiragana" class="app">
@@ -20,6 +23,18 @@
                 </h1>
                 <img src="/assets/images/kids.svg" class="pt-4" alt="Image By Freepik">
             </router-link>
+            <!-- <router-link to="/mouse-game" class="app mouse-game">
+                <h4>Mouse Game</h4>
+                <h4>For</h4>
+                <h1 class="kids">
+                    <span class="text-yellow-300">K</span>
+                    <span class="text-green-300">I</span>
+                    <span class="text-red-300">D</span>
+                    <span class="text-blue-300">S</span>
+                    
+                </h1>
+                <img src="/assets/images/time_for_mousegame.png" class="pt-4 w-full" alt="Image By Freepik">
+            </router-link> -->
             <!-- <router-link to="/maw-gpt" class="maw-gpt-app">
                 <div class="maw-gpt-logo">
                     <img src="/assets/images/pp.png" alt="" @click="clickImg">
@@ -48,7 +63,7 @@
 <style lang="scss" scoped>
     .home-page{
         .let-connect{
-            @apply font-mono flex items-center justify-center p-4 bg-slate-100;
+            @apply font-mono flex flex-col items-center justify-center p-4 bg-slate-100;
             span{
                 @apply md:text-center cursor-progress;
             }
@@ -64,6 +79,9 @@
                 .kids{
                     @apply font-serif text-center;
                 }
+            }
+            .app.mouse-game{
+                @apply bg-blue-400;
             }
             .maw-gpt-app{
                 @apply flex flex-col items-center rounded border border-blue-300 pt-6;
