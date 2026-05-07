@@ -43,7 +43,7 @@
                 </div>
             </div>
             <div class="pp">
-                <img src="/assets/images/pp.png" alt="">
+                <img src="/assets/images/dad.jpeg" alt="">
             </div>
         </div>
     </div>
@@ -61,7 +61,7 @@ const hoverEffect = ref("")
             @apply relative py-8 flex flex-col-reverse gap-4 items-center;
             @apply md:py-20 md:flex-row gap-4;
             .pp{
-                @apply bg-slate-300 rounded-full p-3 shadow-lg;
+                @apply bg-slate-300 rounded-full shadow-lg;
                 img{
                     @apply w-40 h-40 rounded-full transform -scale-x-[1];
                     @apply hover:-scale-x-[-1];
